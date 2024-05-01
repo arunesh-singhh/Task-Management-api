@@ -3,6 +3,10 @@ import * as taskController from '../controllers/taskController.js';
 
 const router = express.Router();
 
+router.get('/', (req, res) => {
+    res.send("Welcome To Task Management API")
+});
+
 // Create a new task
 router.post('/tasks', taskController.createTask);
 
